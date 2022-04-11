@@ -1,5 +1,11 @@
 Revision history for Perl module Text::ParseWords
 
+3.30_02 2022-04-11 NEILB
+    - Restructured the part that describes the $keep parameter
+    - Dropped the & in front of function names, as it felt old-school
+    - Reworded parts of the AUTHORS section
+    - All files now use strict and warnings.
+
 3.30_01  2022-04-09  NEILB
     - Skip taint tests if running under Perl that doesn't support taint
     - Added myself to AUTHORS section and fixed pod warnings in that section

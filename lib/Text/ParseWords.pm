@@ -2,7 +2,7 @@ package Text::ParseWords;
 
 use strict;
 require 5.006;
-our $VERSION = "3.30_01";
+our $VERSION = "3.30_02";
 
 
 use Exporter;
@@ -190,31 +190,46 @@ Text::ParseWords - parse text into an array of tokens or array of arrays
 
 =head1 DESCRIPTION
 
-The &nested_quotewords() and &quotewords() functions accept a delimiter 
+The C<nested_quotewords()> and C<quotewords()> functions accept a delimiter 
 (which can be a regular expression)
 and a list of lines and then breaks those lines up into a list of
-words ignoring delimiters that appear inside quotes.  &quotewords()
-returns all of the tokens in a single long list, while &nested_quotewords()
-returns a list of token lists corresponding to the elements of @lines.
-&parse_line() does tokenizing on a single string.  The &*quotewords()
-functions simply call &parse_line(), so if you're only splitting
-one line you can call &parse_line() directly and save a function
+words ignoring delimiters that appear inside quotes.  C<quotewords()>
+returns all of the tokens in a single long list, while C<nested_quotewords()>
+returns a list of token lists corresponding to the elements of C<@lines>.
+C<parse_line()> does tokenizing on a single string.  The C<*quotewords()>
+functions simply call C<parse_line()>, so if you're only splitting
+one line you can call C<parse_line()> directly and save a function
 call.
 
-The $keep argument is a boolean flag.  If true, then the tokens are
-split on the specified delimiter, but all other characters (including
-quotes and backslashes) are kept in the tokens.  If $keep is false then the
-&*quotewords() functions remove all quotes and backslashes that are
+The C<$keep> controls what happens with delimters and special characters:
+
+=over 4
+
+=item true
+
+If true, then the tokens are split on the specified delimiter,
+but all other characters (including quotes and backslashes)
+are kept in the tokens.
+
+=item false
+
+If $keep is false then the C<*quotewords()> functions
+remove all quotes and backslashes that are
 not themselves backslash-escaped or inside of single quotes (i.e.,
-&quotewords() tries to interpret these characters just like the Bourne
+C<quotewords()> tries to interpret these characters just like the Bourne
 shell).  NB: these semantics are significantly different from the
 original version of this module shipped with Perl 5.000 through 5.004.
+
+=item C<"delimiters">
+
 As an additional feature, $keep may be the keyword "delimiters" which
 causes the functions to preserve the delimiters in each string as
 tokens in the token lists, in addition to preserving quote and
 backslash characters.
 
-&shellwords() is written as a special case of &quotewords(), and it
+=back
+
+C<shellwords()> is written as a special case of C<quotewords()>, and it
 does token parsing with whitespace as a delimiter-- similar to most
 Unix shells.
 
