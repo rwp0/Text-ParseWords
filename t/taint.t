@@ -1,6 +1,9 @@
 #!./perl -Tw
 # [perl #33173] shellwords.pl and tainting
 
+use strict;
+use warnings;
+
 BEGIN {
     if ( $ENV{PERL_CORE} ) {
         require Config;
