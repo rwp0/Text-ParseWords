@@ -280,26 +280,28 @@ L<Text::CSV> - for parsing CSV files
 
 =head1 AUTHORS
 
-Neil Bowers E<lt>neilb@cpan.orgE<gt> (2022-).
+The original author is unknown,
+but presumably this evolved from C<shellwords.pl> in Perl 4.
 
-Alexandr Ciornii E<lt>alexchornyATgmail.comE<gt> (2008-2022).
-
-Hal Pomeranz E<lt>pomeranz@netcom.comE<gt> (1994-1999).
-
-(Original author unknown).
-
-Much of the code for &parse_line()
+Much of the code for C<parse_line()>
 (including the primary regexp)
-from Joerk Behrends E<lt>jbehrends@multimediaproduzenten.deE<gt>.
+came from Joerk Behrends E<lt>jbehrends@multimediaproduzenten.deE<gt>.
 
 Examples section and other documentation provided by
 John Heidemann E<lt>johnh@ISI.EDUE<gt>.
 
-Bug reports, patches, and nagging provided by lots of folks-- thanks
-everybody!  Special thanks Michael Schwern E<lt>schwern@envirolink.orgE<gt>
-for assuring me that a &nested_quotewords() would be useful, and to 
-Jeff Friedl E<lt>jfriedl@yahoo-inc.comE<gt> for telling me not to worry about
-error-checking (sort of-- you had to be there).
+Hal Pomeranz E<lt>pomeranz@netcom.comE<gt>
+maintained this from 1994 through 1999,
+and did the first CPAN release.
+
+Alexandr Ciornii E<lt>alexchornyATgmail.comE<gt>
+maintained this from 2008 to 2015.
+
+Many other people have contributed,
+with special thanks due to 
+Michael Schwern E<lt>schwern@envirolink.orgE<gt>
+and
+Jeff Friedl E<lt>jfriedl@yahoo-inc.comE<gt>.
 
 =head1 COPYRIGHT AND LICENSE
 
