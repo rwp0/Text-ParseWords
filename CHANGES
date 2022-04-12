@@ -1,5 +1,11 @@
 Revision history for Perl module Text::ParseWords
 
+3.31  2022-04-12  NEILB
+    - Skip taint tests if running under Perl that doesn't support taint
+    - Doc: restructured section describing the $keep parameter
+    - Doc: dropped the & in front of function names, as it felt old-school
+    - Doc: updated the AUTHORS section
+
 3.30_02 2022-04-11 NEILB
     - Restructured the part that describes the $keep parameter
     - Dropped the & in front of function names, as it felt old-school

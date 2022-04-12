@@ -3,7 +3,7 @@ package Text::ParseWords;
 use strict;
 use warnings;
 require 5.006;
-our $VERSION = "3.30_02";
+our $VERSION = "3.31";
 
 
 use Exporter;
