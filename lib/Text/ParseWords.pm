@@ -183,11 +183,11 @@ Text::ParseWords - parse text into an array of tokens or array of arrays
 =head1 SYNOPSIS
 
   use Text::ParseWords;
-  @lists = nested_quotewords($delim, $keep, @lines);
-  @words = quotewords($delim, $keep, @lines);
-  @words = shellwords(@lines);
-  @words = parse_line($delim, $keep, $line);
-  @words = old_shellwords(@lines); # DEPRECATED!
+  my @lists = nested_quotewords($delim, $keep, @lines);
+  my @words1 = quotewords($delim, $keep, @lines);
+  my @words2 = shellwords(@lines);
+  my @words3 = parse_line($delim, $keep, $line);
+  my @words4 = old_shellwords(@lines); # DEPRECATED!
 
 =head1 DESCRIPTION
 
@@ -214,7 +214,7 @@ are kept in the tokens.
 
 =item false
 
-If $keep is false then the C<*quotewords()> functions
+If C<$keep> is false then the C<*quotewords()> functions
 remove all quotes and backslashes that are
 not themselves backslash-escaped or inside of single quotes (i.e.,
 C<quotewords()> tries to interpret these characters just like the Bourne
